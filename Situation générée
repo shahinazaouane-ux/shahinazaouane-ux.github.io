@@ -1,0 +1,12 @@
+En juin mon entreprise se retrouve avec 8 ordinateurs en fin de garantie.Le responsableSI me demande de préparer le dossier de remplacement pour lequel je me devais de répondre a 3 questions: 
+quels postes changer en premier, par quel matériel et pour combien. J'avais donc un plafond d'environ 8000 non ferme.
+Jai donc commencer par faire un inventaire de mes huits postes de travail a partir de GLPI 10.O donc un outil d'inventaire natif, avec pour chacun son usure technique, configuration,et incidents des trois dernières années
+    cela ma donc indiqué que des postes noirs,donc des machines qui saturent le support et que parmis 19 plaintes recue par l'entreprises deux postes en provoquent 11.En comparant les deux scénarios tout remplacer d'un coup qui me couterais 8400 euro
+et deux journée vides pour tout le monde ou bien remplacer les 4 postes les plus utilisés en novembre et les quatres autres ultérièrement vers mars qui me reviendrai plutot a 4200 sur l'exercice et en plus une charge d'installation étalée. J'ai été menée par la deuxième et 
+justifier ca par le cout et la continuité du service. 
+Avec l'aide d'un tableur de comparaison GOOGLE SHEETS,des devis,et une note de synthèse d'environ une page pour le gérant
+avec des notions de verifications pour chaque élément donner :date, et sources.après avoir fait lire la note au responsable SI; Avec tout ca jai inscrit ce qu'on allait faoire des anciens postes, dont quatre en reconditionnement en postes d'atelier et les quatres autres en recyclages agrée avec effacement des disque 
+afin de protéger les données confidentielles 
+Le 12 juin le dossier fut présenter, avec les deux options retenue et l'accepation de la première sur les 4200 euros, une semaine après la commande pris son départ et les 4 nouveaux postes ont été installer en novembre sur deux demi journées, sans coupure de service.
+Lors de ma première version de note elle faisait 4 pages et apres ordres du responsable fut réduite a 1 avec 3 chiffres et une recommendation. 
+Un bon dossier en est un qui permet de dicider.
