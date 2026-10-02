@@ -3,70 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camille Ferrand— Portfolio BTS SIO</title>
+  <title>Remplacement d'un switch d'étage saturé — Portfolio</title>
   <style>
-    ##Parcours
-    Après un bac STI2D, j'ai choisi l'option SISR pour travailler sur les infrastructures et le réseau. Je suis en alternance dans une PME de métallurgie de 45 postes, répartis sur deux sites, où j'interviens au service informatique avec un technicien et un responsable SI.
     body { font-family: system-ui, Arial, sans-serif; max-width: 760px; margin: 0 auto;
            padding: 24px 16px 64px; line-height: 1.6; color: #1a1a1a; }
     header { border-bottom: 3px solid #0F766E; padding-bottom: 12px; margin-bottom: 8px; }
     h1 { margin: 0 0 4px; font-size: 1.9rem; }
-    .sous-titre { color: #555; margin: 0; }
+    .sous-titre { color: #555; margin: 0; font-style: italic; }
     nav a { margin-right: 14px; color: #0F766E; text-decoration: none; font-weight: 600; }
     nav a:hover { text-decoration: underline; }
-    h2 { margin-top: 40px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+    h2 { margin-top: 40px; border-bottom: 1px solid #ddd; padding-bottom: 6px; color: #0F766E; }
     footer { margin-top: 48px; color: #777; font-size: .9rem; border-top: 1px solid #ddd; padding-top: 12px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 4px; }
+    .competences-bloc { background-color: #f9f9f9; border-left: 4px solid #0F766E; padding: 12px 16px; margin-top: 32px; }
   </style>
 </head>
 <body>
-## Compétences
+
   <header>
-    <h1>Camille Ferrand/h1>
-    <p class="sous-titre">BTS SIO, option SLAM — promotion 2026-2028</p>
+    <h1>Remplacement d'un switch d'étage saturé</h1>
+    <p class="sous-titre">PME de métallurgie, 45 postes, site principal — Mars 2026 — Option SISR</p>
   </header>
 
   <nav>
-    <a href="#parcours">Parcours</a>
-    <a href="#competences">Compétences</a>
-    <a href="#realisations">Réalisations</a>
-    <a href="#veille">Veille</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">← Retour au portfolio</a>
   </nav>
 
-  <h2 id="parcours">Parcours</h2>
-  <p>Votre formation, votre alternance ou vos stages, votre option et pourquoi vous l'avez choisie.</p>
+  <h2>Contexte</h2>
+  <p>Le site principal compte 45 postes, dont 12 dans l'atelier, reliés à un switch d'étage installé en 2016. Les postes de l'atelier servent aux plans de fabrication et à la saisie des temps.</p>
 
-  <h2 id="competences">Compétences</h2>
+  <h2>Problématique</h2>
+  <p>Depuis trois semaines, les 12 postes de l'atelier subissaient des coupures réseau de quelques secondes, plusieurs fois par jour. La sauvegarde du serveur de fichiers, lancée à 12 h, durait 42 minutes au lieu des 6 minutes habituelles et terminait parfois en erreur.</p>
+
+  <h2>Démarche</h2>
+  <p>J'ai d'abord relevé les débits depuis un poste de l'atelier : 8 Mo/s en copie vers le serveur, contre 74 Mo/s depuis un poste du bureau. Trois hypothèses ont été émises : le câblage, la carte réseau des postes ou le switch.</p>
+  <p>J'ai écarté le câblage : les liens ont été certifiés en 2023 et un test au testeur de câble sur trois prises n'a rien montré. J'ai écarté la carte réseau : le problème touchait les 12 postes simultanément, pas un seul.</p>
+  <p>Restait le switch, un modèle 16 ports à 100 Mb/s dont les compteurs affichaient des erreurs de collision. Je l'ai remplacé par un switch administrable gigabit prêté par le fournisseur, pour valider l'hypothèse avant tout achat.</p>
+
+  <h2>Outils mobilisés</h2>
   <ul>
-    <li>Gérer le patrimoine informatique — <em>preuve à relier</em></li>
-    <li>Répondre aux incidents et aux demandes d'assistance — <em>preuve à relier</em></li>
-    <li>Développer la présence en ligne de l'organisation — <em>preuve à relier</em></li>
-    <li>Travailler en mode projet — <em>preuve à relier</em></li>
-    <li>Mettre à disposition un service informatique — <em>preuve à relier</em></li>
-    <li>Organiser son développement professionnel — <em>preuve à relier</em></li>
+    <li>Switch administrable 16 ports gigabit (modèle de prêt, puis modèle acheté)</li>
+    <li>Testeur de câble RJ45</li>
+    <li>Wireshark 4.2 pour observer les retransmissions</li>
+    <li>GLPI 10.0 pour le suivi du ticket et la mise à jour de l'inventaire</li>
   </ul>
 
-  <h2 id="realisations">Réalisations</h2>
-  <ul>
-    <li><a href="situation-01.html">Situation n° 1 — titre de la situation</a></li>
-    <li><a href="situation-02.html">Situation n° 2 — titre de la situation</a></li>
-    <li><a href="situation-03.html">Situation n°3 — titre de la situation</a></li> 
- 
-  </ul>
+  <h2>Précautions prises</h2>
+  <p>J'ai sauvegardé la configuration de l'ancien switch, étiqueté les 16 câbles avant de les débrancher, et programmé l'intervention entre 12 h 30 et 13 h 15, hors production. J'ai prévenu le chef d'atelier la veille.</p>
 
-  <h2 id="veille">Veille</h2>
-  <ul>
-    <li>Source 1 — ce que je suis et ce que j'en retire</li>
-    <li>Source 2 — …</li>
-    <li>Source 3 — …</li>
-  </ul>
+  <h2>Résultats</h2>
+  <p>Le débit de copie est passé de 8 Mo/s à 74 Mo/s. La sauvegarde est redescendue à 6 minutes. Aucune coupure n'a été signalée dans les trois semaines qui ont suivi. L'inventaire GLPI a été mis à jour le jour même.</p>
 
-  <h2 id="contact">Contact</h2>
-  <p>shahinazaouane@gmail.com</p>
+  <h2>Bilan personnel</h2>
+  <p>J'ai perdu deux jours à suspecter le câblage alors que les compteurs d'erreurs du switch donnaient la réponse dès le premier relevé. La prochaine fois, je commencerai par interroger les équipements réseau en SNMP avant de tester les liens un par un.</p>
+
+  <div class="competences-bloc">
+    <strong>Compétences mobilisées :</strong>
+    <ul>
+      <li>Gérer le patrimoine informatique</li>
+      <li>Répondre aux incidents et aux demandes d'assistance</li>
+    </ul>
+  </div>
 
   <footer>
-    Portfolio réalisé dans le cadre du BTS SIO — dernière mise à jour : jour mois année.
+    Portfolio réalisé dans le cadre du BTS SIO — Dernière mise à jour : Mars 2026.
   </footer>
 
 </body>
 </html>
+
